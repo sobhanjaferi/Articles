@@ -1,0 +1,39 @@
+#container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.title {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.list a {
+  margin-top: 2%;
+  width: 23%;
+}
+
+
+/* ================== media query ================== */
+
+@media screen and (max-width : 590px) {
+  .list a{
+    width: 32%;
+  }
+}
+
+@media screen and (max-width : 470px) {
+  .list a{
+    width: 49%;
+  }
+}

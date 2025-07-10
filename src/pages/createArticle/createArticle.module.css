@@ -1,0 +1,41 @@
+#container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    direction: rtl;
+}
+
+#container h3{
+    margin: 10px 0px 20px;
+}
+
+.form{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.form label{
+    margin: 0px 0px 10px;
+    color: #444;
+}
+
+.form input{
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+.btn{
+    padding: 10px;
+    max-width: 100px;
+}
+
+.outPut{
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    max-width: 200px;
+}

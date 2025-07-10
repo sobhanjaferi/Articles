@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#container {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  padding: 0px 350px;
+}
+
+.title {
+  margin-top: 20px;
+}
+
+.discription {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin: 10px 0px;
+}
+
+.discription span {
+  margin-left: 20px;
+}
+
+.img {
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.paragraph {
+  text-align: right;
+}
