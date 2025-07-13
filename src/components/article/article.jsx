@@ -16,7 +16,7 @@ function ReadArticle(props) {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get(`http://localhost:8000/articles/${params.id}`)
+      .get(`http://localhost:4000/articles/${params.id}`)
       .then((result) => {
         setData(result.data);
         setIsLoading(false);

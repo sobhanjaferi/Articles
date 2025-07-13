@@ -14,7 +14,7 @@ function Home() {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("http://localhost:8000/articles")
+      .get("http://localhost:4000/articles")
       .then((result) => {
         setArticles(result.data);
         setIsLoading(false);
