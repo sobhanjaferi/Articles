@@ -7,6 +7,7 @@ function AddArticle() {
   const [title, setTitle] = useState("");
   const [img, setImg] = useState("");
   const [content, setContent] = useState("");
+  const [readingTime, setReadingTime] = useState("");
 
   const HandleClick = () => {
     fetch("http://localhost:8000/Articles", {
@@ -14,9 +15,7 @@ function AddArticle() {
       body: JSON.stringify({
         id: `${Math.floor(Math.random() * 1000)}`,
         title: title,
-        readingTime: `${Math.floor(Math.random() * 60)}:${Math.floor(
-          Math.random() * 60
-        )}`,
+        readingTime: readingTime,
         content: content,
         imgUrl: img,
       }),
@@ -24,17 +23,18 @@ function AddArticle() {
     setTitle("");
     setImg("");
     setContent("");
+    setReadingTime("");
   };
 
   return (
     <Container>
-      <div className="w-full px-5 flex flex-col h-screen bg-cyan-950">
+      <div className="w-full h-110 rounded-xl mt-10 px-5 flex flex-col bg-cyan-950">
         <div className="flex justify-between items-center mt-10">
           <label className="text-2xl">title :</label>
           <input
             type="text"
             placeholder="Enter your article title"
-            className="w-11/12 p-2 rounded-full border-1 border-white bg-cyan-800"
+            className="w-10/12 p-2 rounded-full border-1 border-white bg-cyan-800"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
@@ -44,9 +44,19 @@ function AddArticle() {
           <input
             type="text"
             placeholder="Enter your img url"
-            className="w-11/12 p-2 rounded-full border-1 border-white bg-cyan-800"
+            className="w-10/12 p-2 rounded-full border-1 border-white bg-cyan-800"
             value={img}
             onChange={(e) => setImg(e.target.value)}
+          />
+        </div>
+        <div className="flex justify-between items-center mt-10">
+          <label className="text-2xl">time :</label>
+          <input
+            type="text"
+            placeholder="Enter your reading time"
+            className="w-10/12 p-2 rounded-full border-1 border-white bg-cyan-800"
+            value={readingTime}
+            onChange={(e) => setReadingTime(e.target.value)}
           />
         </div>
         <div className="flex justify-between items-center mt-10">
@@ -54,7 +64,7 @@ function AddArticle() {
           <input
             type="text"
             placeholder="Enter your article content"
-            className="w-11/12 p-2 rounded-full border-1 border-white bg-cyan-800"
+            className="w-10/12 p-2 rounded-full border-1 border-white bg-cyan-800"
             value={content}
             onChange={(e) => setContent(e.target.value)}
           />

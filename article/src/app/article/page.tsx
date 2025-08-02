@@ -11,7 +11,7 @@ export interface TData {
 }
 
 async function ArticlePage() {
-  const result = await fetch(`http://localhost:8000/Articles`);
+  const result = await fetch("http://localhost:8000/Articles");
   const data = (await result.json()) as TData[];
 
   return (
@@ -19,7 +19,7 @@ async function ArticlePage() {
       <div className="grid grid-cols-4 gap-5 py-5">
         {data.map((article: TData) => (
           <Link href={`/article/${article.id}`} key={article.id}>
-            <Article {...article}/>
+            <Article {...article} />
           </Link>
         ))}
       </div>

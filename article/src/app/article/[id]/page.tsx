@@ -14,14 +14,14 @@ async function ReadArticle(props: Tprops) {
 
   return (
     <Container>
-      <div className="h-full my-10 rounded-2xl px-30 py-10 bg-gray-900 flex flex-col">
+      <div className="h-full my-10 rounded-2xl p-10 bg-gray-900 flex flex-col items-center">
         <img
           src={data.imgUrl}
           alt="img"
-          className="w-full mb-10 rounded-2xl h-150 bg-amber-300"
+          className="max-w-200 min-w-100 mb-10 rounded-2xl h-150 bg-amber-300"
         />
 
-        <div className="flex justify-around items-center mb-10">
+        <div className="w-full flex justify-around items-center mb-10">
           <span>{data.title}</span>
           <span>{data.readingTime}</span>
         </div>
